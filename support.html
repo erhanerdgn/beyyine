@@ -4,50 +4,78 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Destek — Beyyine</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
+    :root { --bg: #050A0E; --surface: rgba(255,255,255,0.04); --border: rgba(255,255,255,0.06); --text: #C9D1D9; --heading: #E6EDF3; --gold: #D4AF37; --teal: #7DAE9C; --muted: #6E7681; }
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #0D1117; color: #E6EDF3; line-height: 1.8; }
-    .container { max-width: 720px; margin: 0 auto; padding: 40px 24px; }
-    h1 { font-size: 2em; margin-bottom: 8px; }
-    h2 { color: #D4AF37; margin-top: 32px; margin-bottom: 8px; font-size: 1.3em; }
-    p, li { color: #C9D1D9; font-size: 0.95em; }
-    ul { padding-left: 20px; margin: 8px 0; }
-    a { color: #7DAE9C; }
-    .contact-card { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 24px; margin-top: 24px; }
-    .contact-card h3 { color: #7DAE9C; margin-bottom: 8px; }
-    footer { text-align: center; margin-top: 60px; color: #484F58; font-size: 0.85em; }
+    body { font-family: 'Inter', -apple-system, sans-serif; background: var(--bg); color: var(--text); line-height: 1.8; }
+    .orb { position: fixed; width: 500px; height: 500px; border-radius: 50%; filter: blur(120px); opacity: 0.1; pointer-events: none; }
+    .orb-1 { bottom: -200px; left: -100px; background: var(--gold); }
+    .container { position: relative; z-index: 1; max-width: 720px; margin: 0 auto; padding: 48px 24px; }
+    h1 { font-size: 2.2em; font-weight: 800; color: var(--heading); margin-bottom: 8px; }
+    .subtitle { color: var(--muted); margin-bottom: 40px; }
+    h2 { color: var(--gold); margin-top: 40px; margin-bottom: 16px; font-size: 1.15em; }
+    a { color: var(--teal); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .faq { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 20px 24px; margin-bottom: 12px; }
+    .faq h3 { color: var(--heading); font-size: 0.95em; font-weight: 600; margin-bottom: 6px; }
+    .faq p { font-size: 0.9em; color: var(--muted); }
+    .contact { background: linear-gradient(135deg, rgba(212,175,55,0.08), rgba(125,174,156,0.08)); border: 1px solid rgba(212,175,55,0.15); border-radius: 16px; padding: 28px; margin-top: 40px; }
+    .contact h3 { color: var(--gold); margin-bottom: 12px; font-size: 1.1em; }
+    .contact-link { display: flex; align-items: center; gap: 12px; padding: 12px 16px; background: var(--surface); border: 1px solid var(--border); border-radius: 10px; margin-bottom: 8px; transition: all 0.2s; }
+    .contact-link:hover { border-color: var(--teal); transform: translateX(4px); text-decoration: none; }
+    .contact-link span { color: var(--heading); font-weight: 500; font-size: 0.9em; }
+    .contact-link small { color: var(--muted); font-size: 0.8em; }
+    footer { text-align: center; margin-top: 60px; padding-top: 24px; border-top: 1px solid var(--border); }
+    footer p { color: var(--muted); font-size: 0.8em; }
+    .back { display: inline-block; color: var(--muted); text-decoration: none; font-size: 0.85em; margin-bottom: 24px; }
+    .back:hover { color: var(--teal); }
   </style>
 </head>
 <body>
+  <div class="orb orb-1"></div>
   <div class="container">
+    <a href="index.html" class="back">&larr; Ana Sayfa</a>
+
     <h1>Destek</h1>
-    <p style="color: #8B949E;">Beyyine ile ilgili sorulariniz, onerileriniz veya sorunlariniz icin bize ulasin.</p>
+    <p class="subtitle">Beyyine ile ilgili sorulariniz ve onerileriniz icin bize ulasin.</p>
 
     <h2>Sikca Sorulan Sorular</h2>
 
-    <h3 style="color: #7DAE9C; margin-top: 16px;">Namaz vakitleri dogru mu?</h3>
-    <p>Evet. Beyyine, Diyanet Isleri Baskanligi ile uyumlu hesaplama yontemi kullanir. Konum izninizin acik oldugundan emin olun.</p>
+    <div class="faq">
+      <h3>Namaz vakitleri dogru mu?</h3>
+      <p>Evet. Beyyine, Diyanet Isleri Baskanligi ile uyumlu hesaplama yontemi kullanir. Konum izninizin acik oldugundan emin olun.</p>
+    </div>
 
-    <h3 style="color: #7DAE9C; margin-top: 16px;">Kible pusulasi calismiyorsa ne yapmaliyim?</h3>
-    <p>Cihazinizi 8 seklinde hareket ettirerek pusulayi kalibre edin. Manyetik alan kaynakalarindan (telefon kilifi, metal yuzeyler) uzak durun.</p>
+    <div class="faq">
+      <h3>Kible pusulasi calismiyorsa ne yapmaliyim?</h3>
+      <p>Cihazinizi 8 seklinde hareket ettirerek pusulayi kalibre edin. Manyetik alan kaynaklarindan uzak durun.</p>
+    </div>
 
-    <h3 style="color: #7DAE9C; margin-top: 16px;">Premium aboneligimi nasil iptal ederim?</h3>
-    <p>iPhone'da Ayarlar > Apple ID > Abonelikler > Beyyine > Aboneligi Iptal Et.</p>
+    <div class="faq">
+      <h3>Premium aboneligimi nasil iptal ederim?</h3>
+      <p>iPhone: Ayarlar &gt; Apple ID &gt; Abonelikler &gt; Beyyine &gt; Aboneligi Iptal Et.</p>
+    </div>
 
-    <h3 style="color: #7DAE9C; margin-top: 16px;">Veri silme talebinde bulunabilir miyim?</h3>
-    <p>Evet. Asagidaki e-posta adresinden veri silme talebinde bulunabilirsiniz.</p>
+    <div class="faq">
+      <h3>Veri silme talebinde bulunabilir miyim?</h3>
+      <p>Evet. GitHub Issues uzerinden veri silme talebinde bulunabilirsiniz.</p>
+    </div>
 
-    <div class="contact-card">
+    <div class="contact">
       <h3>Iletisim</h3>
-      <ul>
-        <li>E-posta: <a href="mailto:erhan.erdogan@kiva.com.tr">erhan.erdogan@kiva.com.tr</a></li>
-        <li>GitHub: <a href="https://github.com/erhanerdgn/beyyine/issues">Hata Bildirimi</a></li>
-        <li>GitHub: <a href="https://github.com/erhanerdgn/beyyine/discussions">Oneriler ve Tartisma</a></li>
-      </ul>
+      <a href="https://github.com/erhanerdgn/beyyine/issues" class="contact-link">
+        <span>Hata Bildirimi</span>
+        <small>GitHub Issues</small>
+      </a>
+      <a href="https://github.com/erhanerdgn/beyyine/discussions" class="contact-link">
+        <span>Oneri ve Tartisma</span>
+        <small>GitHub Discussions</small>
+      </a>
     </div>
 
     <footer>
-      <p>&copy; 2026 Beyyine. Tum haklari saklidir.</p>
+      <p>&copy; 2026 Beyyine &middot; Erhan ERDOGAN</p>
     </footer>
   </div>
 </body>
