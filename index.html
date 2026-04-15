@@ -81,6 +81,21 @@
       padding: 8px 16px; border-radius: 8px; border: 1px solid transparent; transition: all 0.2s;
     }
     .footer-links a:hover { color: var(--teal); border-color: var(--border); }
+    .lang-switch { text-align: right; margin-bottom: 16px; }
+    .lang-switch a { color: var(--muted); text-decoration: none; font-size: 0.85em; font-weight: 500; padding: 6px 14px; border-radius: 8px; border: 1px solid var(--border); transition: all 0.2s; }
+    .lang-switch a:hover, .lang-switch a.active { color: var(--teal); border-color: var(--teal); }
+
+    /* Pricing table */
+    .pricing { margin-bottom: 80px; }
+    .pricing table { width: 100%; border-collapse: separate; border-spacing: 0; background: var(--surface); border: 1px solid var(--border); border-radius: 16px; overflow: hidden; }
+    .pricing th { background: rgba(212,175,55,0.08); color: var(--gold); font-size: 0.85em; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; padding: 14px 16px; text-align: left; }
+    .pricing th:not(:first-child) { text-align: center; }
+    .pricing td { padding: 10px 16px; font-size: 0.88em; border-top: 1px solid var(--border); }
+    .pricing td:not(:first-child) { text-align: center; }
+    .pricing tr:hover td { background: rgba(255,255,255,0.02); }
+    .pricing .check { color: var(--teal); }
+    .pricing .lock { color: #484F58; }
+    .pricing .sep td { padding: 4px; background: none; border: none; }
 
     footer { text-align: center; padding: 40px 0; border-top: 1px solid var(--border); }
     footer p { color: var(--muted); font-size: 0.8em; }
@@ -91,8 +106,13 @@
   <div class="orb orb-2"></div>
 
   <div class="container">
+    <div class="lang-switch">
+      <a href="index.html" class="active">Turkce</a>
+      <a href="en/index.html">English</a>
+    </div>
+
     <div class="hero">
-      <img src="https://raw.githubusercontent.com/erhanerdgn/beyyine/main/icon.png" alt="Beyyine" class="logo" onerror="this.style.display='none'">
+      <img src="icon.png" alt="Beyyine" class="logo">
       <h1>Beyyine</h1>
       <p class="tagline">Islami Bilgi Kaynaginiz</p>
     </div>
@@ -138,13 +158,43 @@
       <div class="stat"><div class="num">400+</div><div class="label">Hadis</div></div>
     </div>
 
+    <p class="section-label">Free vs Premium</p>
+    <div class="pricing">
+      <table>
+        <thead>
+          <tr><th>Ozellik</th><th>Free</th><th>Premium</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Namaz Vakitleri (5 Vakit)</td><td class="check">&#10003;</td><td class="check">&#10003;</td></tr>
+          <tr><td>Kible Pusulasi</td><td class="check">&#10003;</td><td class="check">&#10003;</td></tr>
+          <tr><td>Kur'an Okuma (114 Sure)</td><td class="check">&#10003;</td><td class="check">&#10003;</td></tr>
+          <tr><td>Tecvid Renklendirme</td><td class="check">&#10003;</td><td class="check">&#10003;</td></tr>
+          <tr><td>Elif-Ba (30 Ders, 1500+ Ses)</td><td class="check">&#10003;</td><td class="check">&#10003;</td></tr>
+          <tr><td>Namaz Rehberi (Adim Adim)</td><td class="check">&#10003;</td><td class="check">&#10003;</td></tr>
+          <tr><td>25 Peygamber, 400+ Hadis</td><td class="check">&#10003;</td><td class="check">&#10003;</td></tr>
+          <tr><td>Cuma Hutbesi (Diyanet)</td><td class="check">&#10003;</td><td class="check">&#10003;</td></tr>
+          <tr><td>Hicri Takvim ve Ozel Gunler</td><td class="check">&#10003;</td><td class="check">&#10003;</td></tr>
+          <tr><td>Harameyn Canli Yayin</td><td class="check">&#10003;</td><td class="check">&#10003;</td></tr>
+          <tr><td>Apple Watch</td><td class="check">&#10003;</td><td class="check">&#10003;</td></tr>
+          <tr class="sep"><td colspan="3"></td></tr>
+          <tr><td>Sure Bastan Sona Dinleme</td><td class="lock">&#10007;</td><td class="check">&#10003;</td></tr>
+          <tr><td>Kur'an Kari Secimi (7 Okuyucu)</td><td class="lock">&#10007;</td><td class="check">&#10003;</td></tr>
+          <tr><td>Sesli Namaz Rehberi</td><td class="lock">&#10007;</td><td class="check">&#10003;</td></tr>
+          <tr><td>Cami Bulucu (Apple Maps)</td><td class="lock">&#10007;</td><td class="check">&#10003;</td></tr>
+          <tr><td>Kilit Ekrani Widget</td><td class="lock">&#10007;</td><td class="check">&#10003;</td></tr>
+          <tr><td>Dynamic Island</td><td class="lock">&#10007;</td><td class="check">&#10003;</td></tr>
+          <tr><td>Siri Kisayollari</td><td class="lock">&#10007;</td><td class="check">&#10003;</td></tr>
+          <tr><td>Reklamsiz Deneyim</td><td class="lock">&#10007;</td><td class="check">&#10003;</td></tr>
+        </tbody>
+      </table>
+    </div>
+
     <div class="cta">
       <a href="https://apps.apple.com/app/beyyine" class="cta-btn">App Store'dan Indir</a>
     </div>
 
     <div class="footer-links">
       <a href="privacy-policy.html">Gizlilik Politikasi</a>
-      <a href="privacy-policy-en.html">Privacy Policy</a>
       <a href="support.html">Destek</a>
       <a href="https://github.com/erhanerdgn/beyyine">GitHub</a>
     </div>
